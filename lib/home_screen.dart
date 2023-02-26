@@ -15,19 +15,29 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('Home Screen'),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 50,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.green
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            InkWell(
+              onTap: (){
+
+              },
+              child: Container(
+                height: 50,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  color: Colors.green
+                ),
+                child: const Center(
+                  child: Text('Screen 1'),
+                ),
+              ),
             ),
-            child: Center(
-              child: Text('Screen 1'),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
