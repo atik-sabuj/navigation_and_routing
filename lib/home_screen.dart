@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_and_routing/screen_two.dart';
+import 'package:navigation_and_routing/utils/routes_name.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -24,12 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: (){
-                /*Navigator.pushNamed(context, ScreenTwo.id);*/
-/*                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ScreenTwo(
-                      name: "Sabuj Atik",
-                      num: 12,
-                    )));*/
+                Navigator.pushNamed(context, RouteName.screenTwo);
               },
               child: Container(
                 height: 50,
