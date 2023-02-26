@@ -25,7 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: (){
-                Navigator.pushNamed(context, ScreenTwo.id);
+                Navigator.pushNamed(context, ScreenTwo.id,
+                  arguments: {
+                  'name' : 'Sabuj Atik',
+                    'age' : 25
+                  }
+                );
 /*                Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ScreenTwo(
                       name: "Sabuj Atik",
