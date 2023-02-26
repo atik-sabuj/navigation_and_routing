@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:navigation_and_routing/home_screen.dart';
 
 class ScreenThree extends StatefulWidget {
+  static const String id = 'screen_three';
+
   final String name;
   final int number;
 
