@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_and_routing/home_screen.dart';
-import 'package:navigation_and_routing/screen_three.dart';
+import 'package:navigation_and_routing/utils/routes_name.dart';
 
-class ScreenTwo extends StatefulWidget {
-
-  const ScreenTwo({Key? key,}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<ScreenTwo> createState() => _ScreenTwoState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _ScreenTwoState extends State<ScreenTwo> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    //final arguments = ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sabuj Atik"),
+        title: Text('Home Screen'),
         centerTitle: true,
       ),
       body: Padding(
@@ -27,17 +24,21 @@ class _ScreenTwoState extends State<ScreenTwo> {
           children: [
             InkWell(
               onTap: (){
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ScreenThree()));
+                Navigator.pushNamed(context, RouteName.screenTwo,
+                    arguments: {
+                     'Node' : 'Js Module',
+                      'Flutter' : 'Good For Apps',
+                    }
+                );
               },
               child: Container(
                 height: 50,
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                    color: Colors.green
+                  color: Colors.green
                 ),
                 child: const Center(
-                  child: Text('Screen 2'),
+                  child: Text('Screen 1'),
                 ),
               ),
             ),

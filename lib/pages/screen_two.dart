@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_and_routing/home_screen.dart';
+import 'package:navigation_and_routing/utils/routes_name.dart';
 
-class ScreenThree extends StatefulWidget {
-
-  const ScreenThree({Key? key}) : super(key: key);
+class ScreenTwo extends StatefulWidget {
+  dynamic data;
+  ScreenTwo({Key? key,
+  required this.data
+  }) : super(key: key);
 
   @override
-  State<ScreenThree> createState() => _ScreenThreeState();
+  State<ScreenTwo> createState() => _ScreenTwoState();
 }
 
-class _ScreenThreeState extends State<ScreenThree> {
+class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
+    //final arguments = ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Screen Three"),
+        title: Text(widget.data['Flutter']),
         centerTitle: true,
       ),
       body: Padding(
@@ -25,7 +28,7 @@ class _ScreenThreeState extends State<ScreenThree> {
           children: [
             InkWell(
               onTap: (){
-                Navigator.pop(context);
+                Navigator.pushNamed(context, RouteName.screenThree);
               },
               child: Container(
                 height: 50,
@@ -34,7 +37,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                     color: Colors.green
                 ),
                 child: const Center(
-                  child: Text('Screen 3'),
+                  child: Text('Screen 2'),
                 ),
               ),
             ),

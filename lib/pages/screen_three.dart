@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_and_routing/utils/routes_name.dart';
+import 'package:navigation_and_routing/pages/home_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class ScreenThree extends StatefulWidget {
+
+  const ScreenThree({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ScreenThree> createState() => _ScreenThreeState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ScreenThreeState extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: Text("Screen Three"),
         centerTitle: true,
       ),
       body: Padding(
@@ -24,16 +25,16 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: (){
-                Navigator.pushNamed(context, RouteName.screenTwo);
+                Navigator.pop(context);
               },
               child: Container(
                 height: 50,
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                  color: Colors.green
+                    color: Colors.green
                 ),
                 child: const Center(
-                  child: Text('Screen 1'),
+                  child: Text('Screen 3'),
                 ),
               ),
             ),
