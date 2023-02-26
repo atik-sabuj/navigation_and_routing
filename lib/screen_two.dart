@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_and_routing/home_screen.dart';
+import 'package:navigation_and_routing/screen_three.dart';
 
 class ScreenTwo extends StatefulWidget {
-  const ScreenTwo({Key? key}) : super(key: key);
+  final String name;
+  final int num;
+  const ScreenTwo({Key? key,
+    required this.name,
+    this.num = 2
+  }) : super(key: key);
 
   @override
   State<ScreenTwo> createState() => _ScreenTwoState();
@@ -13,7 +19,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screen Two'),
+        title: Text(widget.name.toString() + " "+widget.num.toString()),
         centerTitle: true,
       ),
       body: Padding(
@@ -25,7 +31,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
             InkWell(
               onTap: (){
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => ScreenThree(
+                      name: widget.name,
+                      number: widget.num,
+                    )));
               },
               child: Container(
                 height: 50,

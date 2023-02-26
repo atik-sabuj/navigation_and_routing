@@ -25,7 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
             InkWell(
               onTap: (){
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ScreenTwo()));
+                    MaterialPageRoute(builder: (context) => ScreenTwo(
+                      name: "Sabuj Atik",
+                      num: 12,
+                    )));
               },
               child: Container(
                 height: 50,
