@@ -2,15 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:navigation_and_routing/home_screen.dart';
 
 class ScreenThree extends StatefulWidget {
-  static const String id = 'screen_three';
 
-  final String name;
-  final int number;
-
-  const ScreenThree({Key? key,
-    required this.name,
-    required this.number,
-  }) : super(key: key);
+  const ScreenThree({Key? key}) : super(key: key);
 
   @override
   State<ScreenThree> createState() => _ScreenThreeState();
@@ -21,7 +14,7 @@ class _ScreenThreeState extends State<ScreenThree> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.name),
+        title: Text("Screen Three"),
         centerTitle: true,
       ),
       body: Padding(

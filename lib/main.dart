@@ -28,13 +28,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      //home: const HomeScreen(),
-      initialRoute: HomeScreen.id,
+      home: const HomeScreen(),
+/*      initialRoute: HomeScreen.id,
       routes: {
         HomeScreen.id : (context) => HomeScreen(),
         ScreenTwo.id : (context) => ScreenTwo(),
-        ScreenThree.id : (context) => ScreenThree(name: '',number: 1),
-      },
+        ScreenThree.id : (context) => ScreenThree(),
+      },*/
     );
   }
 }
