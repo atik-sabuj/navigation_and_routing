@@ -13,7 +13,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screen Three'),
+        title: Text('Screen Two'),
         centerTitle: true,
       ),
       body: Padding(
@@ -34,7 +34,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     color: Colors.green
                 ),
                 child: const Center(
-                  child: Text('Screen 3'),
+                  child: Text('Screen 2'),
                 ),
               ),
             ),
