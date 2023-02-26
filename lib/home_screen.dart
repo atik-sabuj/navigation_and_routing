@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_and_routing/screen_two.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,7 +24,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: (){
-
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ScreenTwo()));
               },
               child: Container(
                 height: 50,
